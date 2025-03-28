@@ -14,16 +14,16 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   res.render("index", { weather: null });
+  console.log(weatherData);
 });
 
 app.post("/", async (req, res) => {
   const city = req.body.city;
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.API_KEY; //dotenv
 
   if (!city) {
     return res.render("index", { weather: null });
   }
-
   try {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     const response = await axios.get(url);
@@ -35,7 +35,6 @@ app.post("/", async (req, res) => {
       description: weatherData.weather[0].description,
       icon: weatherData.weather[0].icon
     };
-
     res.render("index", { weather });
   } catch (error) {
     console.error("Error fetching weather data:", error.message);
