@@ -1,5 +1,7 @@
 🌦️ Weather App 🌦️
 
+![Weather App Screenshot](Assets/screenshot1.png)
+
 A simple weather app using Node.js, Express, and OpenWeatherMap API that shows the current weather and condition for any city.
 
 ## Setup Instructions  
