@@ -27,7 +27,7 @@ Follow these steps to clone and run the project:
    👉 You can get your API key from [https://openweathermap.org/api](https://openweathermap.org/api).  
 
 5. **Run the Project**  
-   `"npm start"`  
+   `"node index.js"`  
 
 6. **Open in Browser**  
    `"http://localhost:3000"`  
